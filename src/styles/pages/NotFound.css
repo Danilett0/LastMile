@@ -1,0 +1,29 @@
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
+}
+
+.NotFound .Img {
+  width: 100%;
+}
+
+.NotFound a {
+  background-color: var(--amarillo-oscuro);
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.5s ease-in-out;
+}
+
+.NotFound a:hover {
+  transform: scale(1.09);
+  filter: saturate(3);
+}

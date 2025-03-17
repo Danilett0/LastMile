@@ -1,0 +1,54 @@
+main .BoxLasTraking {
+  width: 100%;
+  max-width: 1330px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+main .BoxLasTraking .ImgLasTraking {
+  width: 100%;
+  max-width: 600px;
+}
+
+main .BoxLasTraking .BoxInfoTraking {
+  width: 100%;
+  max-width: 600px;
+}
+
+main .BoxLasTraking .BoxInfoTraking h1,
+main .BoxLasTraking .BoxInfoTraking p {
+  text-align: left;
+  color: white;
+}
+
+main .BoxLasTraking .BoxInfoTraking .Button {
+  max-width: 300px;
+}
+
+@media (max-width: 1000px) {
+  main .BoxLasTraking {
+    flex-direction: column;
+  }
+
+  .BoxAccion{
+    justify-content: center;
+  }
+
+  main .BoxLasTraking .BoxInfoTraking h1,
+  main .BoxLasTraking .BoxInfoTraking p {
+    text-align: center;
+  }
+
+  main .BoxLasTraking .BoxInfoTraking .Button {
+    margin: auto;
+  }
+}

@@ -1,0 +1,94 @@
+main .BoxClientes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  max-width: 550px;
+  z-index: 1;
+}
+
+main .BoxClientes .BoxLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .BoxClientes h2 {
+  color: white;
+  text-align: center;
+}
+
+main .BoxClientes .BoxCliente {
+  width: 120px !important;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #092239b4;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 10px;
+  transition: all 0.4s;
+}
+
+main .BoxClientes .BoxCliente:hover {
+  transform: scale(1.09);
+  transition: 0.2s ease-in-out;
+}
+
+main .BoxClientes .BoxCliente img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+main .BoxClientes .BoxCliente p {
+  color: white;
+  text-align: center;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+
+.BoxAccion {
+  display: flex !important;
+  align-items: center;
+  padding: 20px 0px ;
+}
+.BoxAccion img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.BoxAccion p {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 830px) {
+  main .BoxClientes .BoxCliente {
+    margin: 3px;
+    height: auto;
+    background-color: #05192c;
+  }
+
+  main .BoxClientes .BoxLogos {
+    width: 100%;
+  }
+
+  main .BoxClientes .BoxCliente img {
+    width: 35px;
+    height: 35px;
+  }
+}

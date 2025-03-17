@@ -1,0 +1,120 @@
+.BoxChat {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.BoxChat img {
+  width: 100%;
+}
+
+.BoxChat p {
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--color-primario);
+  margin-top: -10px;
+  border-radius: 4px;
+  padding: 3px;
+  font-weight: bold;
+  color: white;
+}
+
+.BoxChat p:hover {
+  box-shadow: 0px 0px 5px var(--gris-claro);
+  cursor: pointer;
+}
+
+.ChatContainer {
+  position: relative;
+}
+
+.ChatWindow {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.ChatContent {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.ChatWindow button {
+  background: var(--rojo-claro);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+}
+
+.ChatWindow h3 {
+  color: var(--azul-claro);
+}
+
+.Faq {
+  margin-top: 20px;
+}
+
+.FaqItem {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.FaqItem h6 {
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: var(--gris-claro);
+}
+
+.FaqItem p {
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-primario);
+  font-size: 15px;
+}
+
+.ChatWindow .LinkWhatsapp {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primario);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ChatWindow .LinkWhatsapp svg {
+  font-size: 25px;
+  color: var(--verde-claro);
+}
+
+.ChatWindow .LinkWhatsapp a {
+  color: white;
+  font-size: 10px;
+  margin-left: 10px;
+  padding: 5px 0px;
+}
+
+.ChatWindow .LinkWhatsapp a:hover {
+  color: var(--verde-claro);
+}

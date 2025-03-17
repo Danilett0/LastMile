@@ -1,0 +1,90 @@
+main.Home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: -1;
+}
+
+main #background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+main .BoxBienvenida {
+  background-color: #092239b4;
+  padding: 25px;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 100%;
+  max-width: 800px;
+}
+
+main .BoxBienvenida h1 {
+  color: white;
+  text-align: left;
+}
+
+main .BoxBienvenida p {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 830px) {
+  main.Home .BoxBienvenida {
+    padding: 25px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    max-width: 80%;
+  }
+
+  main .BoxBienvenida h1 {
+    text-align: center;
+  }
+
+  main .BoxBienvenida p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  main .BoxClientes .BoxCliente {
+    margin: 3px;
+    height: auto;
+    padding: 5px 8px;
+  }
+
+  main .BoxClientes .BoxCliente img {
+    width: 35px;
+    height: 35px;
+  }
+
+  main .BoxChat {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main.Home .BoxBienvenida {
+    padding: 10px;
+  }
+}

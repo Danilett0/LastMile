@@ -1,0 +1,199 @@
+
+:root {
+  --color-primario: #031d2a;
+  --rojo-claro: #ca4343;
+  --rojo-oscuro: #ac3636;
+  --amarillo-claro: #f2d75a;
+  --amarillo-oscuro: #ffc400;
+  --azul-claro: #257bb9;
+  --azul-celeste: #5ae3ee;
+  --gris-claro: #f3f3f3;
+  --gris-oscuro: #c7c7c7;
+  --verde-claro: rgb(17, 161, 149);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: var(--color-primario);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Rubik, sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rubik, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px 0px;
+  text-transform: capitalize;
+}
+
+p {
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 10px 0px;
+  color: var(--color-primario);
+}
+
+.Button {
+  padding: 10px 15px !important;
+  border-radius: 3px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+  border: none !important;
+  cursor: pointer;
+}
+
+.Button:hover {
+  transform: scale(1.03);
+}
+
+.Red {
+  background-color: var(--rojo-claro);
+}
+
+.Red:hover {
+  background-color: var(--rojo-oscuro);
+}
+
+.Green {
+  background-color: var(--verde-claro);
+}
+
+.Blue {
+  background-color: var(--azul-claro);
+}
+
+.Black {
+  background-color: black;
+}
+
+.Yellow {
+  background-color: rgb(255, 166, 0);
+}
+
+.Hidde {
+  display: none;
+}
+
+.AmarilloClaro {
+  color: var(--amarillo-claro);
+}
+
+.AmarilloScuro {
+  color: var(--amarillo-oscuro);
+}
+
+.active {
+  color: var(--azul-celeste) !important;
+}
+
+.Mayus{
+  text-transform: uppercase;
+}
+
+.EfectBorderRoundBlue,
+.EfectBorderRoundWhite {
+  height: 150px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.EfectBorderRoundBlue {
+  background-color: white !important;
+}
+
+.EfectBorderRoundWhite {
+  background-color: #092239 !important;
+}
+
+.Resaltar-Text-Yellow {
+  color: var(--amarillo-oscuro);
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .EfectBorderRoundBlue,
+  .EfectBorderRoundWhite {
+    height: 100px;
+  }
+}
+
+/* animaciones globales */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(1px 1px 3px var(--gris-oscuro));
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes pulse-rotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}

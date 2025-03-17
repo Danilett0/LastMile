@@ -1,0 +1,268 @@
+main.Conocenos {
+  background: #fafafa;
+}
+
+main.Conocenos .BoxCabecera {
+  background-image: linear-gradient(
+      rgba(1, 15, 27, 0.301),
+      hsla(0, 0%, 0%, 0.678)
+    ),
+    url("/public/images/Conocenos/Banne-conocenos.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+  width: 100%;
+}
+
+main.Conocenos .BoxCabecera > div {
+  width: 100%;
+  max-width: 1330px;
+  position: relative;
+}
+
+main.Conocenos .BoxCabecera .BoxIntroCabecera {
+  background-color: var(--color-primario);
+  border-radius: 4px;
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -120px;
+  margin: 25px;
+  padding: 40px;
+  box-shadow: 1px 1px 10px var(--color-primario);
+}
+
+main.Conocenos .BoxCabecera .BoxIntroCabecera h1 {
+  text-align: left;
+  color: white;
+}
+
+main.Conocenos .BoxCabecera .BoxIntroCabecera > p {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
+
+main.Conocenos .BoxEquipo {
+  margin: 150px auto 30px auto;
+  width: 100%;
+  max-width: 1330px;
+  padding: 25px;
+}
+
+main.Conocenos .BoxEquipo h2 {
+  text-align: left;
+  max-width: 400px;
+}
+
+main.Conocenos .BoxEquipo p {
+  text-align: center;
+}
+
+main.Conocenos .BoxEquipo .BoxColaboradores {
+  display: flex;
+  flex-wrap: initial;
+  justify-content: flex-start;
+  padding: 30px 0px;
+}
+
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador {
+  background: white;
+  width: 100%;
+  border-radius: 4px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px;
+  min-height: 400px;
+  box-shadow: 1px 1px 10px var(--gris-oscuro);
+  margin: 10px;
+  transition: 0.5s ease-in-out;
+
+  background-image: linear-gradient(
+      rgba(1, 15, 27, 0.301),
+      hsla(0, 0%, 0%, 0.678)
+    ),
+    url("/public/images/Conocenos/Banne-conocenos.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador h3,
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador p {
+  color: white;
+}
+
+main.Conocenos .BoxPoliticas {
+  background-color: var(--color-primario);
+  padding: 25px;
+}
+
+main.Conocenos .BoxPoliticas h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main.Conocenos .BoxPoliticas p {
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+main.Conocenos .BoxPoliticas .CardsPoliticas {
+  width: 100%;
+  max-width: 1330px;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+main.Conocenos .BoxPoliticas .CardsPoliticas .Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+main.Conocenos .BoxPoliticas .CardsPoliticas .Card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+main.Conocenos .BoxPoliticas .CardsPoliticas .Card img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  display: inline-block;
+  animation: pulse 5s ease-in-out infinite;
+}
+
+main.Conocenos .BoxPoliticas .CardsPoliticas .Card h3 {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.BoxRedes {
+  position: fixed;
+  top: 45%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 1px 1px 222px var(--color-primario);
+  display: flex;
+  flex-direction: column;
+}
+
+.BoxRedes a {
+  margin: 5px 0;
+  border-radius: 50%;
+  padding: 3px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  background: var(--gris-claro);
+  box-shadow: 0px 0px 5px #d9d9d9;
+}
+
+.BoxRedes a:hover {
+  background: var(--color-primario);
+  padding: 5px;
+  transform: rotate(360deg);
+  transition: 1.5s;
+}
+
+.BoxRedes a img {
+  transition: 0.3s;
+  width: 90%;
+  height: auto;
+  display: inline-block;
+  animation: pulse-rotate 3s ease-in-out infinite;
+}
+
+.BoxRedes a img:hover {
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  main.Conocenos .BoxCabecera .BoxIntroCabecera h1,
+  main.Conocenos .BoxCabecera .BoxIntroCabecera p {
+    text-align: center;
+  }
+
+  main.Conocenos .BoxCabecera .BoxIntroCabecera p {
+    font-size: 15px;
+  }
+
+  main.Conocenos .BoxEquipo h2 {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  main.Conocenos .BoxEquipo .BoxColaboradores {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  main.Conocenos {
+    overflow: hidden;
+  }
+
+  main.Conocenos .BoxCabecera {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  main.Conocenos .BoxCabecera .BoxIntroCabecera {
+    max-width: 90%;
+    right: 50%;
+    bottom: -50px;
+    margin: auto;
+    padding: 25px;
+    transform: translate(50%, 0);
+  }
+
+  main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador {
+    padding: 10px;
+    min-height: 250px;
+  }
+
+  main.Conocenos .BoxPoliticas .CardsPoliticas {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main.Conocenos .BoxCabecera .BoxIntroCabecera {
+    padding: 10px;
+  }
+  main.Conocenos .BoxEquipo h2 {
+    text-align: center;
+  }
+}

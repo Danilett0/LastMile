@@ -1,0 +1,57 @@
+.tracking-status {
+  display: flex;
+  align-items: center;
+}
+
+.estado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gris-oscuro);
+  transform: scale(1);
+  width: 150px;
+  box-shadow: 1px 1px 5px var(--gris-oscuro);
+  padding: 5px;
+  border-radius: 4px;
+  background-color: var(--gris-claro);
+  font-family: Rubik, sans-serif;
+
+}
+
+.estado.activo {
+  animation: colorAndScaleTransition 1s forwards;
+}
+
+@keyframes colorAndScaleTransition {
+  0% {
+    color: var(--gris-oscuro);
+    transform: scale(1);
+    background-color: var(--gris-claro);
+
+  }
+  100% {
+    color: #2AB7B6;
+    transform: scale(1.2);
+    background-color: var(--color-primario);
+
+  }
+}
+
+.linea {
+  height: 4px;
+  width: 50px;
+  background-color: var(--gris-oscuro);
+}
+
+.linea.activo {
+  animation: fillLine 1.5s forwards;
+}
+
+@keyframes fillLine {
+  0% {
+    background-color: var(--gris-oscuro);
+  }
+  100% {
+    background-color: #2AB7B6;
+  }
+}

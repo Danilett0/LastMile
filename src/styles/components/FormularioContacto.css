@@ -1,0 +1,111 @@
+.FormContact {
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: Nunito, sans-serif;
+}
+
+.FormContact span {
+  color: var(--rojo-claro);
+  font-size: 15px;
+}
+
+.FormContact input,
+textarea,
+button,
+select {
+  border: none;
+  border-bottom: 1px solid var(--gris-oscuro);
+  padding: 13px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.FormContact input:focus,
+textarea:focus {
+  outline: 0px;
+  border-bottom: 2px solid var(--verde-claro);
+}
+
+.FormContact input:focus::placeholder,
+textarea:focus::placeholder {
+  transform: scale(0.7);
+  transform-origin: top left;
+  opacity: 0.5;
+}
+
+.FormContact .Colx2,
+.Colx1 {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.FormContact .Colx2 .custom-file-upload:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.FormContact .Colx1 {
+  flex-direction: column;
+}
+
+.FormContact .Colx1 textarea {
+  width: 100%;
+}
+
+.FormContact .Colx2 .Col-1,
+.Col-2 {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.FormContact .Colx2 input,
+select {
+  width: 98%;
+}
+
+.FormContact .Colx1 .Button {
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 777px) {
+  .FormContact .Colx2,
+  .Colx1 {
+    flex-direction: column;
+    margin: 0px;
+  }
+}
+
+.FormContact .BoxButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+.FormContact .BtnEnviar {
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  border: none;
+  padding: 0px;
+  margin-top: 3px;
+  transition: ease-in .4s;
+}
+
+.FormContact .BtnEnviar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: var(--azul-celeste);
+}
+
+.FormContact .BtnEnviar svg {
+  width: 100%;
+  height: auto;
+}

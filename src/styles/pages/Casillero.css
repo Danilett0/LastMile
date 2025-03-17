@@ -1,0 +1,326 @@
+.About {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About .Box-Perfil {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.About .Box-Perfil .Perfil {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px 7px 0 0;
+  background: radial-gradient(
+    circle,
+    rgba(2, 42, 80, 0.986) 22%,
+    var(--color-primario) 37%
+  ) !important;
+}
+
+.About .Box-Perfil .Informacion {
+  margin-top: -50px;
+}
+
+.About .Box-Perfil .Informacion h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.About .Box-Perfil .Informacion h2 {
+  color: white;
+  font-size: 20px;
+}
+
+.About .Box-Perfil .Descripcion {
+  padding: 0px 15px;
+  margin-top: 30px;
+}
+
+.About .Box-Perfil .Descripcion p {
+  color: white;
+  text-align: center;
+}
+
+.About .Box-Perfil .Perfil > div {
+  border: 2px solid rgba(255, 255, 255, 0.014);
+  border-radius: 50%;
+  padding: 40px;
+  animation: pulse 5s infinite;
+}
+
+.About .Box-Perfil .Perfil > div > div {
+  border: 2px solid rgba(255, 255, 255, 0.048);
+  border-radius: 50%;
+  padding: 30px;
+  animation: pulse 4s infinite;
+}
+
+.About .Box-Perfil .Perfil .Imagen {
+  border: 2px solid rgba(255, 255, 255, 0.103);
+  border-radius: 50%;
+  padding: 15px;
+  animation: pulse 3s infinite;
+}
+
+.About .Box-Perfil .Perfil .Imagen img {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 50%;
+  border: 4px solid white;
+  filter: saturate(1.3);
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  border: 2px solid rgba(255, 255, 255, 0.151);
+  padding: 4px 20px;
+  margin: 0px 5px;
+  border-radius: 4px;
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto a:hover {
+  border: 2px solid var(--verde-claro);
+  background-color: rgba(6, 83, 134, 0.219);
+  transform: scale(1.03);
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto a.cv {
+  color: var(--verde-claro);
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto a.Email {
+  color: var(--amarillo-oscuro);
+}
+
+.About .Box-Perfil .Informacion .Medios-Contacto a.Linkedin {
+  color: var(--azul-claro);
+}
+
+.About .Box-Perfil .Icon {
+  text-align: center;
+  font-size: 30px;
+  margin: 0px 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.About .Box-Perfil .Perfil .Imagen .Icon:hover {
+  transform: scale(1.03);
+  transition: 0.4s;
+}
+
+.About .Conocimientos {
+  width: 100%;
+  max-width: 1000px;
+  padding: 5px;
+}
+
+.About .Conocimientos h2 {
+  color: white;
+  margin: 30px 0px;
+}
+
+.About .Conocimientos ul {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.About .Conocimientos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  border: 2px solid rgba(255, 255, 255, 0.151);
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.About .Conocimientos li:hover {
+  border: 2px solid var(--verde-claro);
+  background-color: rgba(6, 83, 134, 0.219);
+  transform: scale(1.03);
+}
+
+.About .Conocimientos li img {
+  width: 40px;
+  height: 40px;
+}
+
+.About .Conocimientos li p {
+  color: white;
+  margin-left: 3px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.About .Metodologia {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.About .Metodologia h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.About .Metodologia .Cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.About .Metodologia .Cards .Card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 0px 10px;
+  border-bottom: 10px solid transparent;
+  transition: all 0.5s;
+  background-color: white;
+}
+
+.About .Metodologia .Cards .Card.Transparent {
+  background-color: rgba(0, 0, 0, 0.288);
+  max-width: 420px;
+}
+
+.About .Metodologia .Cards .Card.Transparent p {
+  color: white;
+  font-weight: normal;
+}
+
+.About .Metodologia .Cards .Card::after {
+  content: attr(data-content);
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  left: -15px;
+  top: -15px;
+  border-radius: 50%;
+  background-color: var(--rojo-claro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-family: Rubik, sans-serif;
+}
+
+.About .Metodologia .Cards .Card:hover {
+  border-bottom: 7px solid var(--verde-claro);
+  transform: scale(1.03);
+  z-index: 99;
+}
+
+.About .Metodologia .Cards .Card h4 {
+  color: var(--verde-claro);
+}
+
+.About .Metodologia .Cards .Card img {
+  width: 100%;
+  height: 100%;
+  max-width: 70px;
+  max-height: 70px;
+  margin: 10px 0px;
+}
+.About .Metodologia .Cards .Card p {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-primario);
+}
+
+/* espacio para ajuste de cambio de tamaño de pantalla */
+@media screen and (max-width: 777px) {
+  .About .Box-Perfil {
+    padding: 10px;
+  }
+
+  .About .Box-Perfil .Informacion {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .About .Box-Perfil .Informacion h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .About .Box-Perfil .Informacion h2 {
+    font-size: 13px;
+  }
+
+  .About .Box-Perfil .Informacion .Medios-Contacto {
+    flex-wrap: wrap;
+  }
+
+  .About .Box-Perfil .Informacion .Medios-Contacto a {
+    flex: 1;
+    margin: 5px;
+  }
+
+  .About .Box-Perfil .Imagen {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .About .Conocimientos li {
+    min-width: 250px;
+  }
+
+  .About .Metodologia {
+    margin-top: 10px;
+  }
+
+  .About .Metodologia .Cards {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .About .Metodologia .Cards .Card {
+    margin-bottom: 10px;
+    max-width: 350px;
+  }
+
+  .About .Metodologia .Cards .Card:hover {
+    transform: scale(1);
+  }
+}

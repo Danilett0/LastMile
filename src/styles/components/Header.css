@@ -1,0 +1,154 @@
+header {
+  background-color: var(--color-primario);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 75px;
+}
+
+header .Logo {
+  width: 100%;
+  padding: 5px;
+  max-width: 70px;
+  position: relative;
+  background-color: var(--color-primario);
+  z-index: 2;
+}
+
+header .Logo img {
+  width: 100%;
+  height: auto;
+}
+
+header .Logo img:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+header .RastrearGuia {
+  width: 180px;
+  height: auto;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  overflow: hidden;
+  animation: moveCar 8s forwards;
+  animation-delay: 1s;
+  align-items: center;
+  justify-content: center;
+}
+
+header .RastrearGuia .LinkGuia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+header .RastrearGuia .LinkGuia svg {
+  width: 100%;
+  height: auto;
+}
+
+header .RastrearGuia .LinkGuia::after {
+  content: "Rastrear Guia";
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 2px;
+  font-size: 11px;
+  bottom: 4px;
+  left: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--amarillo-oscuro);
+}
+
+header .RastrearGuia.animation-completed .LinkGuia::after {
+  display: block;
+}
+
+@keyframes moveCar {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+
+  60% {
+    right: 55%;
+    opacity: 1;
+  }
+
+  90% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  91% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+header .Links {
+  display: flex;
+  margin-left: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 15px;
+  }
+
+  header .Links {
+    display: none;
+  }
+
+  header .Logo {
+    display: none;
+  }
+
+  header .RastrearGuia {
+    width: 160px;
+    height: 140px;
+    display: flex;
+    position: absolute;
+    right: -40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
