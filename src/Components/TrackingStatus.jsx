@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { FaBox, FaTruck, FaMapMarkerAlt, FaCheck } from "react-icons/fa";
 import "../styles/components/TrackingStatus.css";
 
 const TrackingStatus = ({ estado }) => {
-  const estados = ["Deposito", "En Ruta", "Camino a Destino", "Entregado"];
+  const estados = useMemo(() => ["Deposito", "En Ruta", "Camino a Destino", "Entregado"], []);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const index = estados.indexOf(estado);
     setActiveIndex(index);
-  }, [estado]);
+  }, [estado, estados]);
 
   const obtenerClaseIcono = (index) => {
     return index <= activeIndex ? "activo" : "inactivo";
