@@ -41,7 +41,7 @@ function CarruselClientes({ Data = {} }) {
                 scale: 1,
                 transition: { duration: 0.5, delay: "0.5" },
               }}
-              whileHover={{ scale: 1.1 }}
+              // whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               key={dato.id}
               className={Data === "Clientes" ? "BoxCliente" : "BoxAccion"}

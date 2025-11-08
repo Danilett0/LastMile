@@ -61,7 +61,7 @@ main .BoxClientes .BoxCliente p {
 .BoxAccion {
   display: flex !important;
   align-items: center;
-  padding: 20px 0px ;
+  padding: 20px 0px;
 }
 .BoxAccion img {
   display: block;

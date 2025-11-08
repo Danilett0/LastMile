@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Loading from "../Components/Loading";
 import useLoading from "../Hooks/useLoading";
-import CarruselClientes from "../Components/CarruselClientes";
+// import CarruselClientes from "../Components/CarruselClientes";
 import "../App.css";
 import "../styles/pages/Home.css";
 
@@ -109,7 +109,7 @@ function Home() {
               </motion.p>
             </motion.div>
 
-            <CarruselClientes Data={"Clientes"} />
+            {/* <CarruselClientes Data={"Clientes"} /> */}
           </main>
         </>
       )}

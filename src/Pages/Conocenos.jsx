@@ -16,9 +16,7 @@ function Portafolio() {
       ) : (
         <>
           <Helmet>
-            <title>
-              Last Mile - Conocenos
-            </title>
+            <title>Last Mile - Conocenos</title>
             <meta
               name="description"
               content="descripcion corta general del la pagina"
@@ -161,7 +159,11 @@ function Portafolio() {
                   className="Card"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
-                    transition: { duration: 0.3, delay: 0.5 },
+                    transition: {
+                      duration: 1,
+                      delay: 1.2,
+                      ease: "easeOut",
+                    },
                     opacity: 1,
                     scale: 1,
                   }}
@@ -169,11 +171,16 @@ function Portafolio() {
                   <img src="./images/Conocenos/badge.png" alt="" />
                   <h3>Politica de Calidad</h3>
                 </motion.div>
+
                 <motion.div
                   className="Card"
-                  initial={{ opacity: 0, scale: 0.2 }}
+                  initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
-                    transition: { duration: 0.3 },
+                    transition: {
+                      duration: 1,
+                      delay: 0.6,
+                      ease: "easeOut",
+                    },
                     opacity: 1,
                     scale: 1,
                   }}
@@ -181,11 +188,16 @@ function Portafolio() {
                   <img src="./images/Conocenos/shield.png" alt="" />
                   <h3>Politica SST</h3>
                 </motion.div>
+
                 <motion.div
                   className="Card"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
-                    transition: { duration: 0.3, delay: 0.5 },
+                    transition: {
+                      duration: 1,
+                      delay: 0,
+                      ease: "easeOut",
+                    },
                     opacity: 1,
                     scale: 1,
                   }}
@@ -193,14 +205,16 @@ function Portafolio() {
                   <img src="./images/Conocenos/safety-barrier.png" alt="" />
                   <h3>Politica de seguridad Vial</h3>
                 </motion.div>
-              </div>
 
-              <div className="CardsPoliticas">
                 <motion.div
                   className="Card"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
-                    transition: { duration: 0.3, delay: 1 },
+                    transition: {
+                      duration: 1,
+                      delay: 0.6,
+                      ease: "easeOut",
+                    },
                     opacity: 1,
                     scale: 1,
                   }}
@@ -208,11 +222,16 @@ function Portafolio() {
                   <img src="./images/Conocenos/employee.png" alt="" />
                   <h3>Politica protección datos Personales</h3>
                 </motion.div>
+
                 <motion.div
                   className="Card"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
-                    transition: { duration: 0.3, delay: 1 },
+                    transition: {
+                      duration: 1,
+                      delay: 1.2,
+                      ease: "easeOut",
+                    },
                     opacity: 1,
                     scale: 1,
                   }}

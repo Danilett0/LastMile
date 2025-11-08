@@ -95,7 +95,7 @@ function Servicios() {
                 }}
               >
                 <motion.img
-                  src="/images/Conocenos/Banne-conocenos.jpg"
+                  src="/images/Servicios/exp.jpg"
                   alt=""
                   animate={{
                     scale: [1, 1.1, 1, 1],
