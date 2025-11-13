@@ -7,7 +7,7 @@ main.Conocenos .BoxCabecera {
       rgba(1, 15, 27, 0.301),
       hsla(0, 0%, 0%, 0.678)
     ),
-    url("/public/images/Conocenos/Banne-conocenos.jpg");
+    url("/public/images/Conocenos/img_portada_conocenos.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -84,20 +84,35 @@ main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador {
   box-shadow: 1px 1px 10px var(--gris-oscuro);
   margin: 10px;
   transition: 0.5s ease-in-out;
-
-  background-image: linear-gradient(
-      rgba(1, 15, 27, 0.301),
-      hsla(0, 0%, 0%, 0.678)
-    ),
-    url("/public/images/Conocenos/Banne-conocenos.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: opacity(0.9);
 }
 
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.clara {
+  background-image: url("/public/images/Conocenos/equipo/clara_romero.png");
+}
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.julian {
+  background-image: url("/public/images/Conocenos/equipo/julian_alarcon.png");
+}
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.martin {
+  background-image: url("/public/images/Conocenos/equipo/martin_rodriguez.png");
+}
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.german {
+  background-image: url("/public/images/Conocenos/equipo/german_romero.png");
+}
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.fernando {
+  background-image: url("/public/images/Conocenos/equipo/fernando_murillo.png");
+}
+main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador.lideres {
+  background-image: url("/public/images/Conocenos/equipo/lideres_area.png");
+}
+
+
 main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador:hover {
-  transform: scale(1.06);
-  cursor: pointer;
+  transform: scale(1.04);
+  filter: opacity(2);
 }
 
 main.Conocenos .BoxEquipo .BoxColaboradores .CardColaborador h3,

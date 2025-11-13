@@ -26,7 +26,7 @@ function Unete() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile -  Unete</title>
+            <title>Last Mile - Unete</title>
             <meta
               name="description"
               content="una corta description de la pagina"
@@ -142,7 +142,48 @@ function Unete() {
                 </div>
 
                 {Form.unete ? (
-                  <FormUnete />
+                  <>
+                    <FormUnete />
+
+                    <div className="ContactoAlternativo">
+                      <h3>
+                        ¿Prefieres otros métodos de contacto? Aquí te ofrecemos
+                        algunas alternativas
+                      </h3>
+                      <div className="Medios">
+                        <div>
+                          <img src="/images/Unete/build.png" alt="" />
+                          <h5>
+                            <a
+                              href="https://www.google.com/maps/place/Cl.+18a+%2368D+40,+Bogot%C3%A1"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {" "}
+                              Cl. 18a # 68D 40, Bogotá{" "}
+                            </a>{" "}
+                          </h5>
+                        </div>
+
+                        <div>
+                          <img src="/images/Unete/email.png" alt="" />
+                          <h5>
+                            {" "}
+                            <a href="mailto:admin3@lastmile.com.co">
+                              {" "}
+                              admin3@lastmile.com.co{" "}
+                            </a>
+                          </h5>
+                        </div>
+                        <div>
+                          <img src="/images/Unete/phone.png" alt="" />
+                          <h5>
+                            <a href="tel:+573126955920"> 312 695 5920 </a>{" "}
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </>
                 ) : (
                   <>
                     <FormAliado />
@@ -156,12 +197,12 @@ function Unete() {
                           <img src="/images/Unete/build.png" alt="" />
                           <h5>
                             <a
-                              href="https://www.google.com/maps/search/?api=1&query=Calle+2+%23+89-35+Bogota"
+                              href="https://www.google.com/maps/place/Cl.+18a+%2368D+40,+Bogot%C3%A1"
                               target="_blank"
                               rel="noreferrer"
                             >
                               {" "}
-                              calle 2 # 89 - 35 san francisco{" "}
+                              Cl. 18a # 68D 40, Bogotá{" "}
                             </a>{" "}
                           </h5>
                         </div>
@@ -170,19 +211,16 @@ function Unete() {
                           <img src="/images/Unete/email.png" alt="" />
                           <h5>
                             {" "}
-                            <a href="mailto:contacto@lastmile.com">
+                            <a href="mailto:admin1@lastmile.com.co">
                               {" "}
-                              contacto@lastmile.com{" "}
+                              admin1@lastmile.com.co{" "}
                             </a>
                           </h5>
                         </div>
                         <div>
                           <img src="/images/Unete/phone.png" alt="" />
                           <h5>
-                            <a href="tel:+576017500500">
-                              {" "}
-                              Bogota ( 601 7500 500 ){" "}
-                            </a>{" "}
+                            <a href="tel:+573108105989"> 310 810 5989</a>{" "}
                           </h5>
                         </div>
                       </div>

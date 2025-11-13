@@ -81,7 +81,7 @@ function Home() {
                   {" "}
                   Last{" "}
                 </motion.span>
-                <span className="Mayus">Mile</span> Tu Solución de Logística
+                <span className="Mayus">Mile</span> Tu Solución en Logística
                 Integral
               </motion.h1>
               <motion.p

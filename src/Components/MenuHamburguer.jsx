@@ -26,7 +26,7 @@ function MenuHamburguer() {
         <div className="box-menu">
           <div className="Logo">
             <Link to="/" onClick={cerrarMenu}>
-              <img src="/images/LastMile-logo.jpg" alt="Logo LastMile" />
+              <img src="/images/Logo_LastMile.jpg" alt="Logo LastMile" />
             </Link>
           </div>
 

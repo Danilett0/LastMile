@@ -33,54 +33,19 @@ function ChatBox() {
           <div className="ChatContent">
             <div className="Faq">
               <div className="FaqItem" onClick={() => toggleFaq(1)}>
-                <h6>¿Cuál es el tiempo estimado de entrega para mi pedido?</h6>
-                {openFaq === 1 && (
-                  <p>
-                    El tiempo estimado de entrega depende del destino y el
-                    método de envío seleccionado. En promedio, los envíos
-                    nacionales tardan entre 3 y 7 días hábiles, mientras que los
-                    envíos internacionales pueden tardar entre 7 y 21 días
-                    hábiles. Te recomendamos verificar el número de seguimiento
-                    para obtener información actualizada sobre tu envío.
-                  </p>
-                )}
+                <h6>¿Estas interesado en alguno de nuestros servicios?</h6>
               </div>
               <div className="FaqItem" onClick={() => toggleFaq(2)}>
-                <h6>¿Cómo puedo rastrear mi pedido?</h6>
-                {openFaq === 2 && (
-                  <p>
-                    Puedes rastrear tu pedido utilizando el número de
-                    seguimiento proporcionado en el correo de confirmación de
-                    envío. Ingresa este número en la sección de seguimiento de
-                    nuestra página web o en el sitio web del transportista para
-                    obtener información detallada sobre el estado de tu envío.
-                  </p>
-                )}
+                <h6>¿Como puedo contactar con un asesor?</h6>
               </div>
               <div className="FaqItem" onClick={() => toggleFaq(3)}>
-                <h6>¿Qué debo hacer si mi paquete llega dañado?</h6>
-                {openFaq === 3 && (
-                  <p>
-                    Si tu paquete llega dañado, por favor contacta a nuestro
-                    servicio de atención al cliente dentro de las 24 horas
-                    posteriores a la recepción. Proporciona fotos del daño y tu
-                    número de pedido. Investigaremos el caso y haremos todo lo
-                    posible para resolverlo, ya sea mediante el reemplazo del
-                    producto o el reembolso de tu compra.
-                  </p>
-                )}
+                <h6>¿Necesitas información de tu envío?</h6>
               </div>
               <div className="FaqItem" onClick={() => toggleFaq(4)}>
-                <h6>¿Qué métodos de pago aceptan?</h6>
-                {openFaq === 4 && (
-                  <p>
-                    Aceptamos una variedad de métodos de pago para tu comodidad,
-                    incluyendo tarjetas de crédito (Visa, MasterCard, American
-                    Express), PayPal, transferencias bancarias y pagos contra
-                    reembolso en algunas ubicaciones. Por favor, consulta
-                    nuestra sección de métodos de pago para más detalles.
-                  </p>
-                )}
+                <h6>¿Tienes aluna novedad con tu envío?</h6>
+              </div>
+              <div className="FaqItem" onClick={() => toggleFaq(4)}>
+                <h6>¿Como puedo rastrear mi envío?</h6>
               </div>
             </div>
           </div>
@@ -90,10 +55,10 @@ function ChatBox() {
 
             <a
               target="_blank"
-              href="https://api.whatsapp.com/send?phone=573112878998"
+              href="https://api.whatsapp.com/send?phone=573123779020"
               rel="noreferrer"
             >
-              Necesitas ayuda personalizada?
+              Comunícate con nosotros
             </a>
           </div>
 

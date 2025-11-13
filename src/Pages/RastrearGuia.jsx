@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import Lottie from "lottie-react";
-import Search from "./Search.json";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Loading from "../Components/Loading";
 import useLoading from "../Hooks/useLoading";
@@ -19,6 +17,12 @@ function RastrearGuia(props) {
     setError(null);
     setGuia(e.target.value);
   };
+
+  const previenirEspacios = (e) => {
+  if (e.key === ' ') {
+    e.preventDefault();
+  }
+};
 
   const buscarGuia = async () => {
     setError("Un momento, por favor...");
@@ -73,14 +77,17 @@ function RastrearGuia(props) {
 
           <main className="RastrearGuia">
             <div className="BoxSearch">
-              <Lottie className="Img" animationData={Search} loop={true} />
+              <div className="Img">
+                <img src="/images/RastrearGuia/rastrear.png" alt="" />
+              </div>
+
               <div className="Search">
-                <label htmlFor="Guia">Ingrese el numero de su guia</label>
                 <input
                   type="text"
-                  placeholder="B2374H34452"
+                  placeholder="Ingrese el numero de su guia"
                   value={guia}
                   onChange={manejarCambio}
+                  onKeyDown={previenirEspacios}
                 />
                 <button className="Button" onClick={buscarGuia}>
                   Buscar

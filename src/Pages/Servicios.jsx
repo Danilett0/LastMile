@@ -64,24 +64,15 @@ function Servicios() {
 
                 <h1>Nuestros Servicios</h1>
                 <p>
-                  En{" "}
-                  <b>
-                    <motion.span
-                      className="Mayus"
-                      animate={{
-                        color: "var(--amarillo-oscuro)",
-                        transition: { duration: 0.8, delay: 1 },
-                      }}
-                    >
-                      {" "}
-                      Last{" "}
-                    </motion.span>{" "}
-                    <span className=" Mayus"> Mile</span>
-                  </b>
-                  , ofrecemos servicios logísticos variados y personalizados
-                  para cumplir tus necesidades, con un enfoque en proporcionar
-                  un servicio excepcional y eficiente. Nos dedicamos a ayudarte
-                  a llevar tu negocio al siguiente nivel.
+                  Servicio integral de logística para garantizar que la
+                  mercancía salga de un centro de producción o de un centro de
+                  distribución y cubra de forma correcta todas las etapas
+                  requeridas hasta llegar al consumidor final, en modelos B2B y
+                  B2C.
+                </p>
+                <p>
+                  Brindando tecnológicamente información clara y estatus real,
+                  en cada proceso.
                 </p>
               </motion.div>
               <motion.div
@@ -95,7 +86,7 @@ function Servicios() {
                 }}
               >
                 <motion.img
-                  src="/images/Servicios/exp.jpg"
+                  src="/images/Servicios/cabecera_servicios.png"
                   alt=""
                   animate={{
                     scale: [1, 1.1, 1, 1],
@@ -115,10 +106,10 @@ function Servicios() {
             <div className="BoxServicios">
               <div className="Servicio">
                 <motion.div
-                  className="Imagen"
+                  className="Imagen FULFILLMENT"
                   initial={{ marginTop: 0, opacity: 0, scale: 0 }}
                   whileInView={{
-                    marginTop: -80,
+                    marginTop: 10,
                     transition: { duration: 1.3 },
                     opacity: 1,
                     scale: 1,
@@ -148,23 +139,33 @@ function Servicios() {
                     }}
                   />
 
-                  <h2>Picking</h2>
+                  <h2>FULFILLMENT (Administración de Inventarios)</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    <b>La Solución Logística Integral para tu Negocio</b>
+                  </p>
+                  <p>
+                    Somos especialistas en fulfillment, el socio estratégico que
+                    tu e-commerce necesita para escalar. Nos integramos con tu
+                    plataforma de ventas para gestionar tu operación logística
+                    de punta a punta. Desde el almacenamiento inteligente de tu
+                    mercancía y el control de inventario, hasta la preparación
+                    meticulosa de cada pedido y el despacho eficiente, nos
+                    convertimos en una extensión de tu marca.
+                  </p>
+                  <p>
+                    Garantiza una experiencia de compra excepcional para tus
+                    clientes con entregas puntuales y precisas, mientras tú te
+                    liberas de las complejidades del almacenaje y los envíos.
                   </p>
                 </motion.div>
               </div>
 
               <div className="Servicio Revert">
                 <motion.div
-                  className="Imagen"
+                  className="Imagen distribucion"
                   initial={{ marginTop: 0, opacity: 0, scale: 0 }}
                   whileInView={{
-                    marginTop: -80,
+                    marginTop: 10,
                     transition: { duration: 1.3 },
                     opacity: 1,
                     scale: 1,
@@ -193,23 +194,38 @@ function Servicios() {
                       transition: { duration: 1, delay: 2 },
                     }}
                   />
-                  <h2>Packing</h2>
+                  <h2>Distribución Urbana Y Nacional</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    <b>
+                      Tu Solución Integral de Transporte: Rápido en la Ciudad,
+                      Sólido en el País
+                    </b>
+                    <br />
+                  </p>
+
+                  <p>
+                    Conecta tu negocio con cada rincón del territorio. Nuestro
+                    servicio de distribución resuelve toda tu logística de
+                    salida: <br />
+                    <br />• Distribución Urbana (Última Milla): Entregas ágiles
+                    y eficientes dentro de la ciudad, asegurando la rapidez que
+                    tus clientes esperan (entregas mismo día o día siguiente).{" "}
+                    <br />
+                    <br />• Distribución Nacional: Una red logística robusta
+                    para llevar tus productos a todas las provincias y regiones,
+                    optimizando costos y tiempos de tránsito. <br />
+                    <br /> Ya sea un paquete al otro lado de la ciudad o un
+                    palet al otro extremo del país, nosotros lo entregamos.
                   </p>
                 </motion.div>
               </div>
 
               <div className="Servicio">
                 <motion.div
-                  className="Imagen"
+                  className="Imagen vehiculo"
                   initial={{ marginTop: 0, opacity: 0, scale: 0 }}
                   whileInView={{
-                    marginTop: -80,
+                    marginTop: 10,
                     transition: { duration: 1.3 },
                     opacity: 1,
                     scale: 1,
@@ -239,23 +255,48 @@ function Servicios() {
                       transition: { duration: 1, delay: 2 },
                     }}
                   />
-                  <h2>Tracking</h2>
+                  <h2>Carga Masiva y Vehículos Dedicados</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    <b>
+                      Maximizando tu Capacidad Logística: Carga Masiva y
+                      Transporte Dedicado
+                    </b>
+                  </p>
+                  <p>
+                    Para las operaciones más exigentes, ofrecemos soluciones de
+                    transporte de alta capacidad diseñadas para la eficiencia y
+                    el control total.
+                  </p>
+                  <p>
+                    • Gestión de Carga Masiva: Nos especializamos en el
+                    movimiento de carga completa (FTL), asegurando que tus
+                    grandes volúmenes de producción o inventario lleguen a su
+                    destino de forma directa, segura y rentable. También
+                    manejamos carga consolidada (LTL) de gran volumen.
+                  </p>
+                  <p>
+                    • Servicio de Vehículos Dedicados: Te proporcionamos una
+                    flota externalizada. Asignamos vehículos y personal
+                    exclusivamente a tu cuenta, funcionando como una extensión
+                    de tu propia empresa. Esto garantiza máxima flexibilidad en
+                    horarios, rutas personalizadas y un manejo prioritario y
+                    seguro de tu mercancía, eliminando paradas innecesarias o el
+                    riesgo de compartir espacio.
+                  </p>
+                  <p>
+                    Es la solución perfecta para centros de distribución,
+                    plantas de producción y clientes B2B que requieren una
+                    logística predecible y robusta.
                   </p>
                 </motion.div>
               </div>
 
               <div className="Servicio Revert">
                 <motion.div
-                  className="Imagen"
+                  className="Imagen operaciones"
                   initial={{ marginTop: 0, opacity: 0, scale: 0 }}
                   whileInView={{
-                    marginTop: -80,
+                    marginTop: 10,
                     transition: { duration: 1.3 },
                     opacity: 1,
                     scale: 1,
@@ -284,62 +325,46 @@ function Servicios() {
                       transition: { duration: 1, delay: 2 },
                     }}
                   />
-                  <h2>Fullfilment</h2>
+                  <h2>Operaciones Cash On Delivery</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    pulsa las ventas de tu negocio y genera máxima credibilidad
+                    con nuestro robusto servicio de Operaciones Cash On Delivery
+                    (COD).
                   </p>
+                  <h4 style={{ textAlign: "left" }}>Para el Cliente:</h4>
+                  <p>
+                    <b>• Confianza Garantizada:</b> Permite a tus clientes pagar
+                    sus pedidos solo una vez que los tienen físicamente en sus
+                    manos, eliminando la principal barrera de la desconfianza en
+                    el e-commerce.
+                  </p>
+
+                  <p>
+                    <b>• Comodidad Total:</b> Ofrece una opción de pago
+                    preferida por un gran segmento del mercado.
+                  </p>
+
+                  <h4 style={{ textAlign: "left" }}>Para Tu Negocio:</h4>
+
+                  <p>
+                    <b>• Aumento de la Tasa de Conversión:</b> La opción COD ha
+                    demostrado ser un motor clave para aumentar las ventas y
+                    reducir los carritos abandonados.
+                  </p>
+
+                  <p>
+                    <b>• Gestión de Recaudo Eficiente:</b> Nos encargamos de la
+                    gestión, recolección y transferencia segura de los fondos
+                    recaudados, garantizando la liquidación de tus ventas de
+                    manera rápida y transparente.
+                  </p>
+
+                  <p><b>Convierte la confianza en ventas. Confía tus operaciones de
+                  Pago Contra Entrega a LAST MILE COMPANY.</b></p>
+
                 </motion.div>
               </div>
-
-              <div className="Servicio">
-                <motion.div
-                  className="Imagen"
-                  initial={{ marginTop: 0, opacity: 0, scale: 0 }}
-                  whileInView={{
-                    marginTop: -80,
-                    transition: { duration: 1.3 },
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                ></motion.div>
-
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    transition: { duration: 2 },
-                    opacity: 1,
-                  }}
-                  className="Contenido ContPaddingLeft"
-                >
-                  <motion.img
-                    className="BackGround"
-                    src="images/servicios/asset.svg"
-                    alt=""
-                    initial={{
-                      width: 0,
-                    }}
-                    animate={{
-                      width: "400px",
-                      transform: "rotate(-30deg)",
-                      transition: { duration: 1, delay: 2 },
-                    }}
-                  />
-                  <h2>Last Mile</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </motion.div>
-              </div>
+                <br />
             </div>
             <ScrollProgres></ScrollProgres>
           </main>

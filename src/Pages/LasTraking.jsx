@@ -1,9 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import Lottie from "lottie-react";
 import CarruselClientes from "../Components/CarruselClientes";
-import Animation from "./Track.json";
 import useLoading from "../Hooks/useLoading";
 import Loading from "../Components/Loading";
 import "../App.css";
@@ -18,7 +16,7 @@ function LasTraking() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile -  LasTraking</title>
+            <title>Last Mile - LasTraking</title>
             <meta
               name="description"
               content="una corta description de la pagina"
@@ -38,19 +36,23 @@ function LasTraking() {
 
           <main>
             <div className="BoxLasTraking">
-              <Lottie
-                className="ImgLasTraking"
-                animationData={Animation}
-                loop={true}
-              />
-              ;
+              <video className="video" autoPlay loop muted>
+            
+                <source src="/videos/last_trakin.mp4" type="video/mp4" /> Tu navegador
+                no soporta el elemento de video.{" "}
+              </video>
+
               <div className="BoxInfoTraking">
                 <h1>En nuestro portal corporativo, podrás realizar...</h1>
 
-                <CarruselClientes  Data={"AccionesPortal"} />
+                <CarruselClientes Data={"AccionesPortal"} />
 
-                <Link className="Button Yellow" to={"http://tracking.lastmile.com.co/login"} target="_blank">
-                ir al portal corporativo 
+                <Link
+                  className="Button Yellow"
+                  to={"http://tracking.lastmile.com.co/login"}
+                  target="_blank"
+                >
+                  ir al portal corporativo
                 </Link>
               </div>
             </div>

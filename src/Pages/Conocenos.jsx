@@ -53,15 +53,15 @@ function Portafolio() {
                     <span className=" Mayus"> Mile</span>
                   </h1>
                   <p>
-                    En{" "}
+                   
                     <b>
                       <span className="AmarilloScuro Mayus">Last</span>{" "}
-                      <span className=" Mayus"> Mile</span>
+                      <span className=" Mayus"> Mile </span>
                     </b>
-                    , nos especializamos en ofrecer servicios logísticos
-                    rápidos, eficientes y de confianza. Nuestra experiencia
-                    garantiza que tus envíos lleguen a su destino de manera
-                    segura y puntual.
+                    una empresa con una marca joven, pero con un
+                    detrás que brinda respaldo, de más de 25 años de experiencia
+                    de su equipo directivo en operaciones que cubren toda la
+                    cadena logística
                   </p>
                 </div>
               </motion.div>
@@ -72,76 +72,76 @@ function Portafolio() {
 
               <div className="BoxColaboradores">
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador clara"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>CLARA ROMERO</h3>
+                  <p>Directora Financiera y Administrativa</p>
                 </motion.div>
 
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador julian"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>JULIÁN ALARCÓN</h3>
+                  <p>Director De Proyectos</p>
                 </motion.div>
 
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador martin"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>MARTIN RODRÍGUEZ</h3>
+                  <p>Director Compras y Calidad</p>
                 </motion.div>
               </div>
 
               <div className="BoxColaboradores">
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador german"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>GERMAN ROMERO</h3>
+                  <p>Director Operaciones</p>
                 </motion.div>
 
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador fernando"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>FERNANDO MURILLO</h3>
+                  <p>Director Tecnología e innovación</p>
                 </motion.div>
                 <motion.div
-                  className="CardColaborador"
+                  className="CardColaborador lideres"
                   initial={{ opacity: 0 }}
                   whileInView={{
                     transition: { duration: 2 },
                     opacity: 1,
                   }}
                 >
-                  <h3>Tom Adams</h3>
-                  <p>Gerente Financiero</p>
+                  <h3>LIDERES DE ÁREAS</h3>
+                  <p>`</p>
                 </motion.div>
               </div>
             </div>
