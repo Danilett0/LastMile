@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Loading from "../Components/Loading";
 import useLoading from "../Hooks/useLoading";
-// import CarruselClientes from "../Components/CarruselClientes";
 import "../App.css";
 import "../styles/pages/Home.css";
 
@@ -34,22 +33,34 @@ function Home() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile</title>
+            <title>Last Mile | Soluciones logísticas en Bogotá</title>
             <meta
               name="description"
-              content="una corta description de la pagina"
+              content="Last Mile es una empresa de logística en Bogotá especializada en distribución urbana, fulfillment, logística inversa y recaudo contra entrega. Transformamos la logística en confianza entregada."
             />
-            <meta name="keywords" content="palabras clave para esta pagina" />
-            <link rel="canonical" href="https://www.lastmile.com/Home" />
+            <meta
+              name="keywords"
+              content="logística Bogotá, última milla, distribución urbana, fulfillment, logística inversa, recaudo contra entrega, transporte de paquetes, empresa logística Colombia"
+            />
+            <link rel="canonical" href="https://www.lastmile.com.co/Home" />
 
             {/* Etiquetas Open Graph */}
-            <meta property="og:title" content="titulo de la pagina" />
+            <meta
+              property="og:title"
+              content="Last Mile | Soluciones logísticas en Bogotá"
+            />
             <meta
               property="og:description"
-              content="description corta de la pagina"
+              content="Expertos en logística de última milla, distribución urbana y soluciones integrales para ecommerce en Bogotá."
             />
-            <meta property="og:image" content="<URL>" />
-            <meta property="og:url" content="<URL>" />
+            <meta
+              property="og:image"
+              content="https://www.lastmile.com.co/assets/img/og-image.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://www.lastmile.com.co/Home"
+            />
           </Helmet>
 
           <main className="Home">
@@ -108,8 +119,6 @@ function Home() {
                 destino de manera segura y puntual.
               </motion.p>
             </motion.div>
-
-            {/* <CarruselClientes Data={"Clientes"} /> */}
           </main>
         </>
       )}

@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import useLoading from "../Hooks/useLoading";
@@ -17,16 +16,39 @@ function Portafolio() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile - Conocenos</title>
+            <title>
+              Last Mile - Conócenos | Expertos en logística en Bogotá
+            </title>
             <meta
               name="description"
-              content="descripcion corta general del la pagina"
+              content="Conoce a Last Mile, empresa líder en logística de última milla en Bogotá. Nuestro equipo está comprometido con la eficiencia, la innovación y la confianza en cada entrega."
             />
             <meta
               name="keywords"
-              content="descripcion corta del la pagina para metadata palabras clave"
+              content="Last Mile, empresa logística Bogotá, equipo de logística, distribución urbana, logística Colombia, conocenos, quienes somos, logística de última milla"
             />
-            <link rel="canonical" href="https://www.dominio.com/conocenos" />
+            <link
+              rel="canonical"
+              href="https://www.lastmile.com.co/conocenos"
+            />
+
+            {/* Etiquetas Open Graph */}
+            <meta
+              property="og:title"
+              content="Conócenos - Last Mile | Líderes en logística en Bogotá"
+            />
+            <meta
+              property="og:description"
+              content="Descubre quiénes somos en Last Mile, expertos en soluciones logísticas para Bogotá y Colombia."
+            />
+            <meta
+              property="og:image"
+              content="https://www.lastmile.com.co/assets/img/team-og.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://www.lastmile.com.co/conocenos"
+            />
           </Helmet>
 
           <main className="Conocenos">

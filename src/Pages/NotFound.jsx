@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import Animation from "./404.json";

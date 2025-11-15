@@ -26,22 +26,51 @@ function Unete() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile - Unete</title>
+            <title>
+              Únete a Last Mile | Oportunidades laborales en logística
+            </title>
             <meta
               name="description"
-              content="una corta description de la pagina"
+              content="Forma parte del equipo de Last Mile, empresa líder en logística en Bogotá. Descubre nuestras vacantes y oportunidades de crecimiento profesional."
             />
-            <meta name="keywords" content="palabras clave para esta pagina" />
-            <link rel="canonical" href="https://www.dominio.com/Unete" />
+            <meta
+              name="keywords"
+              content="trabajo en logística, empleo Bogotá, vacantes Last Mile, oportunidades laborales, únete al equipo, logística Colombia, talento logístico, bolsa de empleo"
+            />
+            <link rel="canonical" href="https://www.lastmile.com.co/Unete" />
 
             {/* Etiquetas Open Graph */}
-            <meta property="og:title" content="titulo de la pagina" />
+            <meta
+              property="og:title"
+              content="Únete a Last Mile | Trabaja con nosotros"
+            />
             <meta
               property="og:description"
-              content="description corta de la pagina"
+              content="Explora oportunidades laborales en Last Mile y sé parte de una empresa innovadora en logística."
             />
-            <meta property="og:image" content="<URL>" />
-            <meta property="og:url" content="<URL>" />
+            <meta
+              property="og:image"
+              content="https://www.lastmile.com.co/assets/img/unete-og.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://www.lastmile.com.co/Unete"
+            />
+
+            {/* Twitter Cards */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:title"
+              content="Únete a Last Mile | Oportunidades laborales en logística"
+            />
+            <meta
+              name="twitter:description"
+              content="Descubre cómo formar parte del equipo de Last Mile en Bogotá."
+            />
+            <meta
+              name="twitter:image"
+              content="https://www.lastmile.com.co/assets/img/unete-og.jpg"
+            />
           </Helmet>
 
           <main className="Unete">

@@ -101,25 +101,52 @@ function RastrearGuia() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile - Rastrear Guia</title>
+            <title>Rastrear Guía | Seguimiento de envíos - Last Mile</title>
             <meta
               name="description"
-              content="una corta description de la pagina"
+              content="Ingresa el número de guía y rastrea tu envío en tiempo real con Last Mile. Servicio confiable de seguimiento para entregas en Bogotá y toda Colombia."
             />
-            <meta name="keywords" content="palabras clave para esta pagina" />
+            <meta
+              name="keywords"
+              content="rastrear guía, seguimiento de envíos, número de guía, Last Mile, logística Bogotá, tracking Colombia, rastreo de paquetes, seguimiento en tiempo real"
+            />
             <link
               rel="canonical"
-              href="https://www.lastmile.com/RastrearGuia"
+              href="https://www.lastmile.com.co/RastrearGuia"
             />
 
             {/* Etiquetas Open Graph */}
-            <meta property="og:title" content="Rastrear Guia" />
+            <meta
+              property="og:title"
+              content="Rastrear Guía | Last Mile Colombia"
+            />
             <meta
               property="og:description"
-              content="description corta de la pagina"
+              content="Consulta el estado de tu envío ingresando el número de guía. Seguimiento confiable y en tiempo real con Last Mile."
             />
-            <meta property="og:image" content="<URL>" />
-            <meta property="og:url" content="<URL>" />
+            <meta
+              property="og:image"
+              content="https://www.lastmile.com.co/assets/img/rastrear-guia-og.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://www.lastmile.com.co/RastrearGuia"
+            />
+
+            {/* Twitter Cards */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:title"
+              content="Rastrear Guía | Seguimiento de envíos - Last Mile"
+            />
+            <meta
+              name="twitter:description"
+              content="Rastrea tu paquete en tiempo real con Last Mile ingresando el número de guía."
+            />
+            <meta
+              name="twitter:image"
+              content="https://www.lastmile.com.co/assets/img/rastrear-guia-og.jpg"
+            />
           </Helmet>
 
           <main className="RastrearGuia">

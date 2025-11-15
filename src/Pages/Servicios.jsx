@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Loading from "../Components/Loading";
@@ -17,22 +16,37 @@ function Servicios() {
       ) : (
         <>
           <Helmet>
-            <title>Last Mile - Servicios</title>
+            <title>Last Mile - Servicios logísticos en Bogotá</title>
             <meta
               name="description"
-              content="una corta description de la pagina"
+              content="Explora los servicios de Last Mile: distribución urbana, logística de última milla, fulfillment, logística inversa y recaudo contra entrega en Bogotá."
             />
-            <meta name="keywords" content="palabras clave para esta pagina" />
-            <link rel="canonical" href="https://www.dominio.com/Servicios" />
+            <meta
+              name="keywords"
+              content="servicios logísticos Bogotá, distribución urbana, última milla, fulfillment, logística inversa, recaudo contra entrega, transporte de paquetes, soluciones logísticas Colombia"
+            />
+            <link
+              rel="canonical"
+              href="https://www.lastmile.com.co/Servicios"
+            />
 
             {/* Etiquetas Open Graph */}
-            <meta property="og:title" content="titulo de la pagina" />
+            <meta
+              property="og:title"
+              content="Servicios logísticos - Last Mile Bogotá"
+            />
             <meta
               property="og:description"
-              content="description corta de la pagina"
+              content="Conoce los servicios de Last Mile: expertos en logística de última milla y distribución urbana en Bogotá."
             />
-            <meta property="og:image" content="<URL>" />
-            <meta property="og:url" content="<URL>" />
+            <meta
+              property="og:image"
+              content="https://www.lastmile.com.co/assets/img/services-og.jpg"
+            />
+            <meta
+              property="og:url"
+              content="https://www.lastmile.com.co/Servicios"
+            />
           </Helmet>
 
           <main className="Servicios">
@@ -359,12 +373,15 @@ function Servicios() {
                     manera rápida y transparente.
                   </p>
 
-                  <p><b>Convierte la confianza en ventas. Confía tus operaciones de
-                  Pago Contra Entrega a LAST MILE COMPANY.</b></p>
-
+                  <p>
+                    <b>
+                      Convierte la confianza en ventas. Confía tus operaciones
+                      de Pago Contra Entrega a LAST MILE COMPANY.
+                    </b>
+                  </p>
                 </motion.div>
               </div>
-                <br />
+              <br />
             </div>
             <ScrollProgres></ScrollProgres>
           </main>
