@@ -7,11 +7,12 @@ import TrackingStatus from "../Components/TrackingStatus";
 import "../App.css";
 import "../styles/pages/RastrearGuia.css";
 
-function RastrearGuia(props) {
+function RastrearGuia() {
   const loadingPage = useLoading("RastrearGuia", 300);
   const [guia, setGuia] = useState("");
   const [error, setError] = useState(null);
   const [resultado, setResultado] = useState(null);
+  const [Estado, setEstado] = useState("DEPOSITO");
 
   const manejarCambio = (e) => {
     setError(null);
@@ -19,32 +20,78 @@ function RastrearGuia(props) {
   };
 
   const previenirEspacios = (e) => {
-  if (e.key === ' ') {
-    e.preventDefault();
-  }
-};
+    if (e.key === " ") {
+      e.preventDefault();
+    }
+  };
 
   const buscarGuia = async () => {
     setError("Un momento, por favor...");
+    setResultado(null); // Limpiar resultado anterior
 
     if (!guia.trim()) {
       setError("Por favor ingrese un numero de guia");
       return;
     }
 
-    try {
-      const response = await fetch(
-        `https://api.tusitio.com/buscar?guia=${guia}`
-      );
-      const data = await response.json();
-      if (data) {
+    const myHeaders = new Headers();
+    myHeaders.append("L-APIKEY", process.env.REACT_APP_API_KEY);
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      guideNumber: guia.trim(),
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    const Estadosextra = {
+      approved: "ENTREGADO",
+      rejected: "EN CAMINO",
+      partial: "ENTREGADO",
+      pending: "DEPOSITO",
+    };
+
+    fetch("http://tracking.lastmile.com.co/api/guias/buscar", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        const data = JSON.parse(result);
+
+        // Verificar si hay estados ANTES de procesar
+        if (!data.estados || data.estados.length === 0) {
+          setError("No se encontraron registros para esta guía");
+          setResultado(null);
+          return;
+        }
+
+        data.estados = data.estados.reverse();
         setResultado(data);
-      } else {
-        setError("No se ha encontrado informacion de esta guía");
-      }
-    } catch (error) {
-      setError("No se ha encontrado informacion de esta guía");
-    }
+        setError(null); // Mover esto DESPUÉS de verificar que hay datos
+
+        const estado0 = data.estados[0];
+
+        console.log("Estado más reciente:", estado0.motivo);
+        if (estado0.motivo === "ENTREGADO") {
+          setEstado(estado0.motivo);
+        } else if (estado0?.cerca === "Si") {
+          setEstado("EN CAMINO");
+        } else {
+          const clave = estado0.estado?.toLowerCase();
+          console.log("Clave del estado:", clave);
+          if (Estadosextra[clave]) {
+            setEstado(Estadosextra[clave]);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setError("Error al buscar la guía. Por favor intente nuevamente.");
+        setResultado(null);
+      });
   };
 
   return (
@@ -76,15 +123,13 @@ function RastrearGuia(props) {
           </Helmet>
 
           <main className="RastrearGuia">
-            <div className="BoxSearch">
-              <div className="Img">
-                <img src="/images/RastrearGuia/rastrear.png" alt="" />
-              </div>
-
+            <div
+              className={"BoxSearch " + (resultado ? " ResultadoActivo" : "")}
+            >
               <div className="Search">
                 <input
                   type="text"
-                  placeholder="Ingrese el numero de su guia"
+                  placeholder="Ingrese numero guia"
                   value={guia}
                   onChange={manejarCambio}
                   onKeyDown={previenirEspacios}
@@ -95,61 +140,90 @@ function RastrearGuia(props) {
               </div>
             </div>
 
-            {resultado && (
+            {resultado && !error && (
               <div className="Resultado">
                 <h2 className="">Estado actual de su pedido </h2>
 
                 <div className="Iconos">
-                  <TrackingStatus estado={guia} />
+                  <TrackingStatus estado={Estado} />
                 </div>
 
                 <h2 className="Informacion">
                   Obtenga Información detallada de su pedido{" "}
                 </h2>
 
-                <div className="UltimoSeguimiento">
-                  <div>
-                    <span>Ciudad Destino</span>
-                    <h2>Bogota</h2>
-                    <span>Conductor: Jeferson Castro</span>
-                  </div>
-                  <div>
-                    <span>Direccion</span>
-                    <h2>Calle 2 # 89 - 35</h2>
-                    <span>
-                      Calle 2 # 89 - 35 manzana 13 casa 117 portales en
-                      primavera
-                    </span>
-                  </div>
-                  <div>
-                    <span>Estado</span>
-                    <h2>Entregado</h2>
-                    <span>Fecha: 2024-12-16</span>
-                  </div>
-                  <div className="Imagenes">
-                    <span>Evidencia Fotografica</span>
-                    <div>
-                      <a href="images/Logo_LastMile.jpg" target="_blank">
-                        {" "}
-                        <img src="images/Logo_LastMile.jpg" alt="" />
-                      </a>
-                      <a href="images/Logo_LastMile.jpg" target="_blank">
-                        {" "}
-                        <img src="images/Logo_LastMile.jpg" alt="" />
-                      </a>
-                      <a href="images/Logo_LastMile.jpg" target="_blank">
-                        {" "}
-                        <img src="images/Logo_LastMile.jpg" alt="" />
-                      </a>
+                {resultado?.estados?.length > 0 &&
+                  resultado.estados.map((estado, index) => (
+                    <div className="UltimoSeguimiento" key={index}>
+                      <div>
+                        <span>Ciudad Destino</span>
+                        <h2>{estado.ciudad}</h2>
+                        <span>Conductor: {estado.conductor}</span>
+                      </div>
+
+                      <div>
+                        <span>Direccion</span>
+                        <h2>{estado.direccion}</h2>
+                        <span>{estado.dir_extra}</span>
+                      </div>
+
+                      <div>
+                        <span>Estado</span>
+                        <h2>
+                          {estado.estado === "pending"
+                            ? "PENDIENTE"
+                            : estado.estado === "approved"
+                            ? "ENTREGADO"
+                            : estado.estado === "rejected"
+                            ? "RECHAZADO"
+                            : estado.motivo !== null
+                            ? estado.motivo
+                            : "SIN ESTADO"}
+                        </h2>
+                        {estado.estado === "rejected" && estado.motivo && (
+                          <span>{estado.motivo}</span>
+                        )}
+                        <span>Fecha: {estado.llegada}</span>
+                      </div>
+
+                      {estado.images?.length > 0 && (
+                        <div className="Imagenes">
+                          <span>Evidencia Fotográfica</span>
+                          <div>
+                            {estado.images.map((imgUrl, idx) => (
+                              <div key={idx}>
+                                <a
+                                  href={imgUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={imgUrl}
+                                    alt={`Evidencia ${idx + 1}`}
+                                  />
+                                </a>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {estado.pdf?.length > 0 && (
+                        <div className="Adjuntos">
+                          <span>Archivos</span>
+                          <div>
+                            <a
+                              href={estado.pdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaFilePdf className="PDF" />
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  <div className="Adjuntos">
-                    <span>Archivos</span>
-                    <a href="images/Logo_LastMile.jpg" target="_blank">
-                      <FaFilePdf className="PDF" />
-                    </a>
-                  </div>
-                </div>
+                  ))}
 
                 <div className="OtrosSeguimientos"></div>
               </div>

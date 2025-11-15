@@ -3,7 +3,8 @@ import { FaBox, FaTruck, FaMapMarkerAlt, FaCheck } from "react-icons/fa";
 import "../styles/components/TrackingStatus.css";
 
 const TrackingStatus = ({ estado }) => {
-  const estados = useMemo(() => ["Deposito", "En Ruta", "Camino a Destino", "Entregado"], []);
+
+  const estados = useMemo(() => ["DEPOSITO", "RUTA", "EN CAMINO" ,"ENTREGADO"], []);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {

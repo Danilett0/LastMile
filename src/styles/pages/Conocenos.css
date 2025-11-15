@@ -179,6 +179,35 @@ main.Conocenos .BoxPoliticas .CardsPoliticas .Card h3 {
   color: white;
 }
 
+main.Conocenos .MisionVision{
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+main.Conocenos .MisionVision div{
+  width: 50%;
+  padding: 20px;
+  border: 1px solid var(--gris-claro);
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: 1px 1px 10px var(--gris-claro);
+}
+
+main.Conocenos .MisionVision div p{
+  text-align: justify;
+}
+
+
+main.Conocenos .BoxPrincipios  {
+  background-color: var(--color-primario);
+  padding: 25px;
+}
+
+
 .BoxRedes {
   position: fixed;
   top: 45%;
@@ -271,6 +300,16 @@ main.Conocenos .BoxPoliticas .CardsPoliticas .Card h3 {
   main.Conocenos .BoxPoliticas .CardsPoliticas {
     flex-wrap: wrap;
   }
+
+  main.Conocenos .MisionVision{
+    flex-wrap: wrap;
+  }
+
+  main.Conocenos .MisionVision div{
+    width: 90%;
+    margin: 10px auto;
+  }
+
 }
 
 @media screen and (max-width: 500px) {

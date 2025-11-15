@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import useLoading from "../Hooks/useLoading";
 import Loading from "../Components/Loading";
+import PrincipiosAccordion from "../Components/AcordionPrinsipios";
 import "../App.css";
 import "../styles/pages/Conocenos.css";
 
@@ -53,15 +54,14 @@ function Portafolio() {
                     <span className=" Mayus"> Mile</span>
                   </h1>
                   <p>
-                   
                     <b>
                       <span className="AmarilloScuro Mayus">Last</span>{" "}
                       <span className=" Mayus"> Mile </span>
                     </b>
-                    una empresa con una marca joven, pero con un
-                    detrás que brinda respaldo, de más de 25 años de experiencia
-                    de su equipo directivo en operaciones que cubren toda la
-                    cadena logística
+                    una empresa con una marca joven, pero con un detrás que
+                    brinda respaldo, de más de 25 años de experiencia de su
+                    equipo directivo en operaciones que cubren toda la cadena
+                    logística
                   </p>
                 </div>
               </motion.div>
@@ -161,57 +161,6 @@ function Portafolio() {
                   whileInView={{
                     transition: {
                       duration: 1,
-                      delay: 1.2,
-                      ease: "easeOut",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                >
-                  <img src="./images/Conocenos/badge.png" alt="" />
-                  <h3>Politica de Calidad</h3>
-                </motion.div>
-
-                <motion.div
-                  className="Card"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{
-                    transition: {
-                      duration: 1,
-                      delay: 0.6,
-                      ease: "easeOut",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                >
-                  <img src="./images/Conocenos/shield.png" alt="" />
-                  <h3>Politica SST</h3>
-                </motion.div>
-
-                <motion.div
-                  className="Card"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{
-                    transition: {
-                      duration: 1,
-                      delay: 0,
-                      ease: "easeOut",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                >
-                  <img src="./images/Conocenos/safety-barrier.png" alt="" />
-                  <h3>Politica de seguridad Vial</h3>
-                </motion.div>
-
-                <motion.div
-                  className="Card"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{
-                    transition: {
-                      duration: 1,
                       delay: 0.6,
                       ease: "easeOut",
                     },
@@ -242,6 +191,38 @@ function Portafolio() {
               </div>
             </div>
 
+            <div className="MisionVision">
+              <div className="BoxMision">
+                <h2>Misión</h2>
+                <p>
+                  Nuestra misión es proporcionar soluciones de transporte de
+                  última milla que sean rápidas, seguras y personalizadas,
+                  satisfaciendo las necesidades de nuestros clientes con el más
+                  alto nivel de servicio. Nos dedicamos a optimizar cada entrega
+                  a través de tecnología avanzada, una red logística eficiente y
+                  un equipo comprometido, mientras promovemos prácticas
+                  sostenibles que beneficien a la comunidad y al medio ambiente.
+                </p>
+              </div>
+              <div className="BoxVision">
+                <h2>Visión</h2>
+                <p>
+                  Last Mile Company sas será la empresa líder en soluciones de
+                  transporte de última milla, revolucionando la forma en que el
+                  mundo recibe y distribuye productos a través de un enfoque
+                  innovador, sostenible y centrado en el cliente. Nos
+                  comprometemos a ofrecer una experiencia de entrega rápida,
+                  eficiente y confiable, impulsada por tecnología avanzada y
+                  prácticas ecológicas, para conectar a las personas con lo que
+                  necesitan, cuando lo necesitan.
+                </p>
+              </div>
+            </div>
+
+            <div className="BoxPrincipios">
+              <PrincipiosAccordion />
+            </div>
+
             <motion.div
               className="BoxRedes"
               initial={{ left: -50, scale: 0 }}
@@ -252,22 +233,7 @@ function Portafolio() {
               }}
             >
               <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="./images/Logos/facebook.png" alt="Escudo" />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="./images/Logos/instagram.png" alt="Escudo" />
-              </a>
-
-              <a
-                href="https://www.whatsapp.com"
+                href="https://api.whatsapp.com/send?phone=573123779020"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -275,7 +241,7 @@ function Portafolio() {
               </a>
 
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/last-mile-company/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
