@@ -15,7 +15,6 @@
   border-radius: 4px;
   background-color: var(--gris-claro);
   font-family: Rubik, sans-serif;
-
 }
 
 .estado.activo {
@@ -27,13 +26,11 @@
     color: var(--gris-oscuro);
     transform: scale(1);
     background-color: var(--gris-claro);
-
   }
   100% {
-    color: #2AB7B6;
+    color: #2ab7b6;
     transform: scale(1.2);
     background-color: var(--color-primario);
-
   }
 }
 
@@ -52,6 +49,49 @@
     background-color: var(--gris-oscuro);
   }
   100% {
-    background-color: #2AB7B6;
+    background-color: #2ab7b6;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .tracking-status {
+    gap: 15px;
+  }
+
+  .tracking-status .estado {
+    display: flex;
+    width: 100px;
+  }
+
+  .tracking-status .linea {
+    width: 20px;
+  }
+
+  main.RastrearGuia .Resultado .UltimoSeguimiento {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tracking-status {
+    /* flex-direction: column; */
+    gap: 15px;
+  }
+
+  .tracking-status .estado {
+    width: 65px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 12px;
+  }
+
+  .linea {
+    display: none;
+    width: 0px;
+    height: 10px;
   }
 }

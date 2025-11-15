@@ -9,7 +9,7 @@ function LinksNavegacion(props) {
     { id: 1, title: "Conocenos", path: "/Conocenos" },
     // { id: 2, title: "Casillero Deluxe USA", path: "/Casillero" },
     { id: 3, title: "Servicios", path: "/Servicios" },
-    { id: 4, title: "News", path: "/News" },
+    // { id: 4, title: "News", path: "/News" },
     { id: 5, title: "Únete", path: "/Unete" },
     {
       id: 6,
@@ -17,6 +17,12 @@ function LinksNavegacion(props) {
       path: "/LasTraking",
       highlight: "Las",
       normal: "Traking",
+    },
+    { 
+      id: 7, 
+      title: "intégrate", 
+      path: "https://documenter.getpostman.com/view/18690946/2sAXxV6A1A",
+      external: true 
     },
   ];
 
@@ -35,32 +41,41 @@ function LinksNavegacion(props) {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onHoverStart={() => console.log("hover started!")}
-
             initial={{ scale: 0 }}
             animate={{ scale: 1, transition: { duration: .5, delay:.3 } }}
-
           >
-            <NavLink
-              to={item.path}
-              activeclassname="active"
-              onClick={cerrarMenu}
-            >
-              {item.highlight ? (
-                <span>
-                  <motion.span
-                    animate={{
-                      color: "var(--amarillo-oscuro)",
-                      transition: { duration: 0.8, delay: 1 },
-                    }}
-                  >
-                    {item.highlight}
-                  </motion.span>
-                  {item.normal}
-                </span>
-              ) : (
-                item.title
-              )}
-            </NavLink>
+            {item.external ? (
+              <a
+                href={item.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={cerrarMenu}
+              >
+                {item.title}
+              </a>
+            ) : (
+              <NavLink
+                to={item.path}
+                activeclassname="active"
+                onClick={cerrarMenu}
+              >
+                {item.highlight ? (
+                  <span>
+                    <motion.span
+                      animate={{
+                        color: "var(--amarillo-oscuro)",
+                        transition: { duration: 0.8, delay: 1 },
+                      }}
+                    >
+                      {item.highlight}
+                    </motion.span>
+                    {item.normal}
+                  </span>
+                ) : (
+                  item.title
+                )}
+              </NavLink>
+            )}
           </motion.li>
         ))}
       </ul>
